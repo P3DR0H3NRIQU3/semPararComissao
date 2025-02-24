@@ -1,0 +1,7 @@
+/* CSS com Flexbox */
+.main {
+    display: flex;
+    flex-direction: column; /* Faz o layout ficar na vertical */
+  }
+
+  

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+.mainBody{
+    width: 100%;
+   
+}
+.cont-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+
+.title-body {
+    font-size: 60px;
+    text-align: justify;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .title-body {
+      font-size: 25px;
+    }
+}
