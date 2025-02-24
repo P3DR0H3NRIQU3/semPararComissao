@@ -22,6 +22,12 @@ body {
   padding: 0;
 }
 
+.title-body {
+  font-size: 5em;
+  margin: 0;
+  font-weight: bold;
+  color: black;
+}
 
 header {
 
@@ -47,7 +53,11 @@ header {
   max-width: 80px;
   width: 80px;
 }
-
+@media (max-width: 640px) {
+  .title-body {
+    font-size: 3em;
+  }
+}
 
 
 

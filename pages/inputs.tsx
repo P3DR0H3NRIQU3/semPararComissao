@@ -1,4 +1,3 @@
-import "../styles/inputs.css";
 import { useState } from "react";
 
 export default function Inputs() {

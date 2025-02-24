@@ -1,4 +1,3 @@
-import "../styles/body.css";
 import { Typewriter } from 'react-simple-typewriter';
 export default function Body() {
   return (
@@ -20,6 +19,7 @@ function TypewriterEffect() {
           cursor
           cursorStyle="|"
           typeSpeed={60}
+          
           delaySpeed={3000}
         />
       </h1>
