@@ -71,7 +71,7 @@ export default function Inputs() {
         if (multiplicadores[metaNum] !== undefined && salarioNum !== null) {
             const comissao = salarioNum * multiplicadores[metaNum];
             setResultadoCom(comissao);
-            const comissaoDrs = comissao * 0.19
+            const comissaoDrs = comissao * 0.22
             setResultadoDsr(comissaoDrs);
             const valorTotal = comissao + comissaoDrs
             setResultadoTotal(valorTotal);
