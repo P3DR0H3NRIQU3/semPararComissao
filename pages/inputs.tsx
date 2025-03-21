@@ -71,7 +71,7 @@ export default function Inputs() {
         if (multiplicadores[metaNum] !== undefined && salarioNum !== null) {
             const comissao = salarioNum * multiplicadores[metaNum];
             setResultadoCom(comissao);
-            const comissaoDrs = comissao * 0.22
+            const comissaoDrs = comissao * 0.20
             setResultadoDsr(comissaoDrs);
             const valorTotal = comissao + comissaoDrs
             setResultadoTotal(valorTotal);
@@ -81,11 +81,10 @@ export default function Inputs() {
             console.log("Meta inválida!")
             alert("Preencha os campos corretamente: Meta entre 70 a 125 e salário maior que 0")
         }
-
     }
     return (
         <div className="main">
-            
+
             <div className="cont-inputs">
                 <div>
                     <p>Salário:</p>
@@ -107,7 +106,7 @@ export default function Inputs() {
                         type="number"
                         step="0.01"
                         className="inputs"
-                        min="0"
+                        min="70"
                         max="125"
                         value={meta}
                         placeholder="0%"
@@ -122,13 +121,18 @@ export default function Inputs() {
                         {multiplicador !== null && <p className="pFator">{multiplicador.toFixed(2)}%</p>}
                     </div>
                 </div>
+
             </div>
             <button type="button" className="buttonCalc" onClick={calcular}>Calcular</button>
+            
             <div className="cont-resultados">
                 {resultadoCom !== null && <div className="resultadosCalc"> <p className="textResultado">Comissão: <strong>R$ {resultadoCom.toFixed(2)}</strong></p></div>}
                 {resultadoDsr !== null && <div className="resultadosCalc"><p className="textResultado">DSR: <strong>R$ {resultadoDsr.toFixed(2)}</strong></p></div>}
                 {resultadoTotal !== null && <div className="resultadosCalc"> <p className="textResultado">Comissão Total: <strong>R$ {resultadoTotal.toFixed(2)}</strong></p></div>}
+                {multiplicador !== null && multiplicador < 100 && <img src="/semGrana.jpg" alt="" className="imgs" />}
+            {multiplicador !== null && multiplicador >= 100 && <img src="/comGrana.jpg" alt="" className="imgs" />}
             </div>
+
         </div>
 
     );
